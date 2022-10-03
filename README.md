@@ -6,14 +6,7 @@ A lightweight eBPF-based CloudNative Monitor tool for Container Security and Obs
 [![codecov](https://codecov.io/gh/filipdutescu/modern-cpp-template/branch/master/graph/badge.svg)](https://codecov.io/gh/filipdutescu/modern-cpp-template)
 [![GitHub release (latest by date)](https://img.shields.io/github/v/release/yunwei37/Eunomia?include_prereleases)](https://github.com/yunwei37/Eunomia/releases)
 
-#### 这个项目是为了 2022 年操作系统大赛而设计的，它仅适用于概念验证和教学内容，不适用于生产环境。关于更进一步的开源开发计划，请移步 [eunomia-bpf](https://github.com/eunomia-bpf/eunomia-bpf)
-
-eunomia-bpf 将会关注两个方面：
-
-- `eBPF 即服务`：https://github.com/eunomia-bpf/eunomia-bpf
-- `一个工具链和包管理器`：https://github.com/eunomia-bpf/ebpm-bootstrap
-
-We have a mirror of the source code on [GitHub](https://github.com/yunwei37/Eunomia) which runs CI. We also have a mirror on [GitLab](https://gitlab.eduxiji.net/zhangdiandian/project788067-89436), for faster access in China and OS comp.
+#### 本项目来源于 2022 年操作系统大赛118赛题，后续维护将以探索Ebpf+X的形式进行，详见TODO部分
 
 <!-- TOC -->
 
@@ -34,6 +27,7 @@ We have a mirror of the source code on [GitHub](https://github.com/yunwei37/Euno
 - [Why Eunomia](#why-eunomia)
 - [Documents & report](#documents--report)
 - [benchmark](#benchmark)
+- [TODO](#todo)
 
 <!-- /TOC -->
 
@@ -307,3 +301,14 @@ Linux ubuntu 5.13.0-44-generic #49~20.04.1-Ubuntu SMP x86_64 GNU/Linux
 可以观测到启动 eunomia 之后对于服务仅有大约 3-4% 的性能损耗。
 
 > OpenResty® 是一个基于 Nginx 与 Lua 的高性能 Web 平台，其内部集成了大量精良的 Lua 库、第三方模块以及大多数的依赖项。用于方便地搭建能够处理超高并发、扩展性极高的动态 Web 应用、Web 服务和动态网关。web开发人员可以使用lua编程语言，对核心以及各种c模块进行编程，可以利用openresty快速搭建超1万并发高性能web应用系统。这里的 benchmark 参考了：https://openresty.org/en/benchmark.html
+
+## todo
+
+1. feature: improve eunomia multi process performance
+  - fixed eunomia ipc to share memory
+  - update eunomia concurrent programming to multi thread instead of process
+2. feature: impelement auto recsystem into docker capablities
+3. feature: detective 
+4. feature：Explore the application of machine learning technology in kernel through ebpf
+  - application ML into kernel
+  - Model lightweight
